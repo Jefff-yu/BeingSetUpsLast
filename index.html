@@ -161,11 +161,11 @@
             <img id="img-1" src="assets/worldmapbw.png">
         </a-assets>
         <a-camera>
-            <a-cursor color="black" raycaster="objects: [raycastable=true]"></a-cursor>
+            <a-cursor color="black"  cursor="fuse: true; fuseTimeout: 1000" raycaster="objects: [raycastable=true]"></a-cursor>
         </a-camera>
         <a-sky radius="17.5" animation__rotate="property: rotation; easing: linear; from: 0 0 0; to: 0 360 0; dur: 60000; loop: true;" src="#img-1"></a-sky>
         <a-entity raycastable="true" id="java" canva="played: false;"  event-set="_event: start_run; canva.played: true" animation__rotate="property: rotation; easing: linear; from: 0 0 0; to: 0 360 0; dur: 6000; loop: true;"></a-entity>
-        <a-plane raycastable="true" fuse-button="color:red; barColor: #d24; fuseTimeout: 1000;"  position="0 2.6 -5" width="1"
+        <a-plane raycastable="true" fuse-button="color:red; barColor: gray; fuseTimeout: 1000;"  position="0 2.6 -5" width="1"
         event-set="_event: click; raycastable: false; visible: false; _delay: 100;"
         proxy-event="event: click; to: #java; as: start_run">
         <a-text value="START" color="white" position="-0.46 0 0" wrap-count="30"><a-text>
